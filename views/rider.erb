@@ -1,0 +1,28 @@
+<section>
+	<h3>Rider's name is <%= @rider.name %></h3>
+</br>
+	<h3><%= @rider.name %> is <%= @rider.age %> years old and is a <%= @rider.gender %>.<h3>
+</br>
+<form action="/riders/<%= @rider.id %>/delete" method="post">
+	<button>Delete Rider</button>
+</form>
+<a href="/riders/<%= @rider.id %>/new_bicycle">Add a bicycle</a>
+<a href="/riders/<%= @rider.id %>/edit/">Edit rider</a>
+
+<% if !@rider.bikes.empty? %>
+</br>
+	<h3>Bikes:</h3>
+	<% @rider.bikes.each do |bike| %>
+	<p><%= bike.bike_type %></p>
+	<p><%= bike.bike_material %></p>
+	<% end %>
+<% end %>
+
+</section>
+
+
+
+
+
+
+

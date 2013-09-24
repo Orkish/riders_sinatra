@@ -1,0 +1,11 @@
+<form method="post" action="/riders/<%= @rider_id %>/create_bicycle">
+	<div>
+		<label>Bike Type:</label>
+		<input type="text" name="bike[bike_type]" autofocus />
+	</div>
+	<div>
+		<label>Bike Material:</label>
+		<input type="text" name="bike[bike_material]" />
+	</div>
+	<button>Create Bike!</button>
+</form>

@@ -1,0 +1,16 @@
+<% if @nav_riders %>
+	<% @nav_riders.each do |rider| %>
+		<div>
+			<h3><%= rider.name %></h3>is <h4><%= rider.age %> years old.</h4><h4><%= rider.gender %></h4>
+			
+			<% if !rider.bikes.empty? %>
+				</br>
+				<h3>Bicycles:</h3>
+				<% rider.bikes.each do |bike| %>
+				<p><%= bike.bike_type %></p>
+				<p><%= bike.bike_material %></p>
+				<% end %>
+			<% end %>
+		<% end %>
+		</div>
+<% end %>

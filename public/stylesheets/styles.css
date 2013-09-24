@@ -1,0 +1,22 @@
+html {
+	font-family: 'Bubbler One', sans-serif;
+	text-align: center;
+	background-color: #AFEEEE;
+}
+
+ul {
+list-style-type: none;
+}
+
+.nav {
+	font-size: 25px;
+	padding: 10px;
+	text-decoration: none;
+}
+.bike {
+	background-image: 753px 1280px;
+}
+
+.riders {
+	text-decoration: none;
+}

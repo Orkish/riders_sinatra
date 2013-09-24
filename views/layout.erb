@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css"> -->
+	<link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+	<title>Riders!</title>
+
+</head>
+<body>
+	<h1><u>Welcome Riders!</u></h1>
+	<nav>
+		<a class="nav" href='/'>Home</a></li>
+		<a class="nav" href='/riders/new'>Create a Rider</a></li>
+		<a class="nav" href='/riders'>Riders</a></li>
+		<ul>
+			<% @nav_riders.each do |rider| %>
+			<li><a href='/riders/<%= rider.id %>'><%= rider.name %></a></li>
+			<% end %>
+		</ul>
+	</nav>
+	<div class="bike">
+		<img src="images/bike.jpg">
+	</div>
+	<%= yield %>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<form method="post" action='<%= @rider.nil? ? "/riders/create" : "/dogs/#{@rider.id}" %>'>
+	<div>
+		<label>Name:</label>
+		<input type="text" name='rider[name]' value='<%= @rider['name'] if @rider%>' autofocus />
+	</div>
+	<div>
+		<label>Age:</label>
+		<input type='text' name='rider[age]' value='<%= @rider['age'] if @rider %>' />
+	</div>
+	<div>
+		<label>Gender:</label>
+		<input type='text' name='rider[gender]' value='<%= @rider['gender'] if @rider %>' />
+	</div>
+	<button><%= @rider.nil? ? "New Rider" : "Edit Rider" %></button>
+</form>
